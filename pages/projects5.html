@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+  <title>ĐĂNG KÍ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+  <SCRIPT type="text/javascript">
+
+var snowmax=40
+var snowcolor=new Array("#aaaacc","#ddddff","#ccccdd","#f3f3f3","#f0ffff")
+var snowtype=new Array("Times","Arial","Times","Verdana")
+var snowletter="*"
+var sinkspeed=0.6
+var snowmaxsize=30
+var snowminsize=8
+var snowingzone=1
+var snow=new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow=0
+var x_mv=new Array();
+var crds=new Array();
+var lftrght=new Array();
+var browserinfos=navigator.userAgent
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+var ns6=document.getElementById&&!document.all
+var opera=browserinfos.match(/Opera/)
+var browserok=ie5||ns6||opera
+function randommaker(range) {
+        rand=Math.floor(range*Math.random())
+    return rand
+}
+function initsnow() {
+        if (ie5 || opera) {
+                marginbottom = document.body.scrollHeight
+                marginright = document.body.clientWidth-15
+        }
+        else if (ns6) {
+                marginbottom = document.body.scrollHeight
+                marginright = window.innerWidth-15
+        }
+        var snowsizerange=snowmaxsize-snowminsize
+        for (i=0;i<=snowmax;i++) {
+                crds[i] = 0;
+            lftrght[i] = Math.random()*15;
+            x_mv[i] = 0.03 + Math.random()/10;
+                snow[i]=document.getElementById("s"+i)
+                snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+                snow[i].size=randommaker(snowsizerange)+snowminsize
+                snow[i].style.fontSize=snow[i].size+'px';
+                snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+                snow[i].style.zIndex=1000
+                snow[i].sink=sinkspeed*snow[i].size/5
+                if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+                if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+                if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+                if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+                snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+                snow[i].style.left=snow[i].posx+'px';
+                snow[i].style.top=snow[i].posy+'px';
+        }
+        movesnow()
+}
+function movesnow() {
+        for (i=0;i<=snowmax;i++) {
+                crds[i] += x_mv[i];
+                snow[i].posy+=snow[i].sink
+                snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i])+'px';
+                snow[i].style.top=snow[i].posy+'px';
+                if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+                        if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+                        if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+                        if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+                        if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+                        snow[i].posy=0
+                }
+        }
+        var timer=setTimeout("movesnow()",50)
+}
+for (i=0;i<=snowmax;i++) {
+        document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+        window.onload=initsnow
+}
+</SCRIPT>
+
+</head>
+<body>
+<h4><center>TẠO TÀI KHOẢN </center></h4>
+
+<div class="container">
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="email">Nhập Địa Chỉ Email</label>
+      <input type="email" class="form-control" id="email" placeholder="Nhập Địa Chỉ Email " name="email">
+    </div>
+    <div class="row">
+  <div class="col">
+      <label for="email">Tên</label>
+      <input type="email" class="form-control" id="name" placeholder="Tên" name="password">
+  </div>
+  <div class="col">
+     <label for="email">Họ</label>
+      <input type="text" class="form-control" id="name " placeholder="Họ" name="password">
+  </div>
+  </div>
+  <div class="form-group">
+      <label for="pwd">Mật Khẩu</label>
+      <input type="password" class="form-control" id="pwd" placeholder=" Mật Khẩu" name="pswd">
+    </div>
+    <center>
+      <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="switch1">
+    <label class="custom-control-label" for="switch1"></label>Nhận email quảng cáo chương trình khuyến mãi</center>
+  </div>
+    <center><button type="button" class="btn btn-dark">Đăng Kí</button></center>
+    <center><a href="" style="color: black; margin-left: 10px;">Trở Về </a></center>
+    <div class="container">
+<div style="padding-top: 3%">
+<p style="border: solid 1px black;"></p></div>
+  </div>
+</center>
+</form>
+</div>
+  <div class="row">
+  <div class="col-sm-3">
+    <h3>TMĐT 10/5</h3>
+    <p><a href="" style="color: black ; margin-left: 10px;">GIỚI THIỆU</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">ĐIỀU Khoản Sử Dụng</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Chính Sách Bảo Mật</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Chính Sách Khách Hàng</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Chính Sách THanh Toán</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Chính Sách Đổi Trả Bảo Hành</a></p>
+  </div>
+  <div class="col-sm-3">
+    <h3>DANH MỤC SẢN PHẨM</h3>
+    <p><a href="" style="color: black; margin-left: 10px;">Sản Phẩm Mới</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Nam</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Nữ</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">GrusZ</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Trẻ em</a> </p>
+    <p><a href="" style="color: black; margin-left: 10px;">ĐẦU RA</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Bộ sưu tập</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Sản Phẩm Khác</a></p>
+  </div>
+  <div class="col-sm-3">
+    <h3>LIÊN KẾT WEBSITE</h3>
+    <p><a href="" style="color: black;margin-left:10px;">Website Tổng công ti May 10</a></p>
+    <p><a href="" style="color: black;margin-left:10px;">Webside Khách sạn GarcoDragon</a></p>
+    <p><a href="" style="color: black;margin-left:10px;">Webside Siêu thị M10 Mart</a></p>
+    <p><a href="" style="color: black;margin-left:10px;">Webside Cao đẳng nghề LongBiên</a></p>
+  </div>
+  <div class="col-sm-3">
+    <h3>KẾT NỐI VỚI CHÚNG TÔI</h3>
+    Hàng tháng May 10 đều có những dịch vụ và sản phẩm mới ra mắt nhằm phục vụ khách hàng tốt hơn. Để có thể cập nhật kịp thời những thông tin này, vui lòng nhập địa chỉ email của bạn vào ô dưới đây.
+    <nav class="navbar navbar-expand-sm">
+    <form class="form-inline" action="/action_page.php">
+    <input class="form-control mr-sm-2" type="text" placeholder="Địa chỉ email của bạn....  ">
+     <button class="btn btn-success" ><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+    </form>
+  </nav>
+  <div class="row">
+  
+  <div class="col-lg-3"><i style="color: black; font-size: 20px" class="fab fa-facebook-f" ></i></div>
+  <div class="col-lg-3"><i class="fab fa-twitter" aria-hidden="true"></i></div>
+  <div class="col-lg-3"><i class="fab fa-youtube" aria-hidden="true"></i></div>
+  <div class="col-lg-3"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+     </div>
+    </div>
+   </body>
+  </div>
+  <div style="padding-top: 3%">
+<p style="border: solid 1px black;"></p></div>
+<div class="row">
+  <div class="col-sm-10">
+
+TỔNG CÔNG TY MAY 10 - CTCP
+<p>
+Địa chỉ : 765A Nguyễn Văn Linh, Sài Đồng, Long Biên, Hà Nội, Việt Nam.
+</p>
+<p>
+Tổng đài hỗ trợ khách hàng  <a href="" style="color: blue; margin-left: 10px;"> : 1900636628</a> - Email<a href="" style="color: blue; margin-left: 10px;"> : cskh@garco10.com.vn</a>cskh@garco10.com.vn - Điện thoại <a href="" style="color: blue; margin-left: 10px;"> : 1900636628</a>
+</p>
+<p>
+Mã số doanh nghiệp : 0100101308 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 15 tháng 12 năm 2004, thay đổi lần thứ 12 ngày 22 tháng 11 năm 2017
+</p>
+<p>
+© 2019 - Bản quyền thuộc về Tổng Công ty May 10 - CTCP
+</p>
+</div>
+  <div class="col-sm-1">
+    <img src="http://www.online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoSaleNoti.png" class="img-fluid" alt="Chania">
+  </div>
+</div>
+</body>
+</html>

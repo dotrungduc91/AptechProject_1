@@ -1,0 +1,349 @@
+<html lang="en">
+<head>
+<title>Đồng phục</title>
+</head>
+<head>
+<SCRIPT type="text/javascript">
+
+var snowmax=40
+var snowcolor=new Array("#aaaacc","#ddddff","#ccccdd","#f3f3f3","#f0ffff")
+var snowtype=new Array("Times","Arial","Times","Verdana")
+var snowletter="*"
+var sinkspeed=0.6
+var snowmaxsize=30
+var snowminsize=8
+var snowingzone=1
+var snow=new Array()
+var marginbottom
+var marginright
+var timer
+var i_snow=0
+var x_mv=new Array();
+var crds=new Array();
+var lftrght=new Array();
+var browserinfos=navigator.userAgent
+var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+var ns6=document.getElementById&&!document.all
+var opera=browserinfos.match(/Opera/)
+var browserok=ie5||ns6||opera
+function randommaker(range) {
+        rand=Math.floor(range*Math.random())
+    return rand
+}
+function initsnow() {
+        if (ie5 || opera) {
+                marginbottom = document.body.scrollHeight
+                marginright = document.body.clientWidth-15
+        }
+        else if (ns6) {
+                marginbottom = document.body.scrollHeight
+                marginright = window.innerWidth-15
+        }
+        var snowsizerange=snowmaxsize-snowminsize
+        for (i=0;i<=snowmax;i++) {
+                crds[i] = 0;
+            lftrght[i] = Math.random()*15;
+            x_mv[i] = 0.03 + Math.random()/10;
+                snow[i]=document.getElementById("s"+i)
+                snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+                snow[i].size=randommaker(snowsizerange)+snowminsize
+                snow[i].style.fontSize=snow[i].size+'px';
+                snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+                snow[i].style.zIndex=1000
+                snow[i].sink=sinkspeed*snow[i].size/5
+                if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+                if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+                if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+                if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+                snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+                snow[i].style.left=snow[i].posx+'px';
+                snow[i].style.top=snow[i].posy+'px';
+        }
+        movesnow()
+}
+function movesnow() {
+        for (i=0;i<=snowmax;i++) {
+                crds[i] += x_mv[i];
+                snow[i].posy+=snow[i].sink
+                snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i])+'px';
+                snow[i].style.top=snow[i].posy+'px';
+                if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+                        if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+                        if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+                        if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+                        if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+                        snow[i].posy=0
+                }
+        }
+        var timer=setTimeout("movesnow()",50)
+}
+for (i=0;i<=snowmax;i++) {
+        document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+}
+if (browserok) {
+        window.onload=initsnow
+}
+</SCRIPT>
+<style>
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border-image.png) 30 stretch;
+}
+</style>
+  <title>ĐỒNG PHỤC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+<div class="container-fluid">
+  <div>
+   <div class="row">
+  <div class="col">
+    <H2>ĐỒNG PHỤC MAY 10</H2>
+  </div>
+  <div class="col">
+    
+  </div>
+  <div class="col">
+    <div class="dropdown">
+      Sắp xếp
+  <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+    Cũ nhất
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#" class="btn btn-primary">Tùy Chọn</a>
+    <a class="dropdown-item" href="#" class="">Sản Phẩm Bán Chạy</a>
+    <a class="dropdown-item" href="#" class="">Theo Bảng Chữ Cái Từ A-Z</a>
+    <a class="dropdown-item" href="#" class="">Theo Bảng Chữ Cái Từ Z-A</a>
+    <a class="dropdown-item" href="#" class="">Giá Từ Thấp Tới Cao</a>
+    <a class="dropdown-item" href="#" class="">Giá Từ Cao Tới Thấp</a>
+    <a class="dropdown-item" href="#" class="">Mới Nhất</a>
+    <a class="dropdown-item" href="#" class="">Cũ Nhất</a>
+  </div>
+</div>
+  </div>
+  
+</div>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="https://product.hstatic.net/1000392339/product/co_truong_ea2cd4cf28a44f999c92acd0b9f8d0f0_grande.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+        <center>ĐỒNG PHỤC NGHỀ HÀNG KHÔNG</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://product.hstatic.net/1000392339/product/2_7fa2ebf202494319bc0aa026f2ae93a6_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+     <center>ĐỒNG PHỤC NGHỀ THUẾ</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://product.hstatic.net/1000392339/product/jun_4337_24ebbf2e84264ed1a2b937c1aedab008_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+      <center>ĐỒNG PHỤC NGHỀ TƯ PHÁP</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://product.hstatic.net/1000392339/product/1_faca6b4ce57749f4a280bf06f48a7e9d_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+      <center>ĐỒNG PHỤC NGHỀ BƯU CHÍNH - VIỄN THÔNG</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://product.hstatic.net/1000392339/product/3_37b2f10522b54342b26cc2387b5dc894_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+      <center>ĐỒNG PHỤC NGHỀ ĐIỆN LỰC</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://product.hstatic.net/1000392339/product/2_8ff7019ffb6c42b1856be24b2c067fca_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+      <center>ĐỒNG PHỤC NGHỀ KIỂM LÂM </center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://product.hstatic.net/1000392339/product/nbmhj_f94913ace82f43419d4ef11a88c68051_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+      <center>ĐỒNG PHỤC NGHỀ CÔNG NHÂN CƠ KHÍ</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://product.hstatic.net/1000392339/product/jun_4724_daa8d8c26d7c4c89b89b3adbc3d41cb1_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+      <center>ĐỒNG PHỤC NGHỀ Y TẾ</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://product.hstatic.net/1000392339/product/3_2788087df62c45a28b2556be5d4cbcca_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+     <center>ĐỒNG PHỤC NGHỀ CHỮ THẬP ĐỎ</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3" >
+      <img src="https://product.hstatic.net/1000392339/product/kho-van_19a6751fbd384e078148fce930e0e5d7_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+      <center>ĐỒNG PHỤC NGHỀ KHO VẬN</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://product.hstatic.net/1000392339/product/may-to-truong_3cf727ed476a4f6ab9d4e4a7e20a3c45_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+      <center>ĐỒNG PHỤC NGHỀ MAY</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://product.hstatic.net/1000392339/product/sa_51458a8d82114441bf90e2ff86b7fdac_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+      <center>ĐỒNG PHỤC NGHỀ KHÁCH SẠN </center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://product.hstatic.net/1000392339/product/fghggh_1b055fc3a57942928a26f5c76aa96088_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+      <center>ĐỒNG PHỤC NGHỀ NHÂN VIÊN SIÊU THỊ</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3" >
+      <img src="https://product.hstatic.net/1000392339/product/a1_687e8c6adc9748278929e05ce2c86547_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+      <center>ĐỒNG PHỤC NGHỀ VĂN PHÒNG</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3" >
+      <img src="https://product.hstatic.net/1000392339/product/ngan-hang_c3f809d07e6d4113a53a01cc37da18b2_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+      <center>ĐỒNG PHỤC NGHỀ NGÂN HÀNG</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://product.hstatic.net/1000392339/product/bao-ve_4be1f1189fb6410083993f8313ef1ea9_grande.jpg"class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+      <center><button type="button" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-dark">Mua Ngay</button>
+      <button type="button" class="btn btn-dark"><i class="fa fa-shopping-bag" aria-hidden="true"></i></button></center>
+      <center>ĐỒNG PHỤC BẢO VỆ</center>
+        <center><a href="" style="color: red; margin-left: 10px;">Liên hệ </a></center>
+    </div>
+    
+    
+    
+  </div>
+</div>
+<div style="padding-top: 3%">
+<p style="border: solid 1px black;"></p></div>
+</div>
+
+  <div class="row">
+  <div class="col-sm-3">
+    <h4>TMĐT 10/5</h4>
+    <p><a href="" style="color: black ; margin-left: 10px;">GIỚI THIỆU</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">ĐIỀU Khoản Sử Dụng</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Chính Sách Bảo Mật</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Chính Sách Khách Hàng</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Chính Sách THanh Toán</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Chính Sách Đổi Trả Bảo Hành</a></p>
+  </div>
+  <div class="col-sm-3">
+    <h4>DANH MỤC SẢN PHẨM</h4>
+    <p><a href="" style="color: black; margin-left: 10px;">Sản Phẩm Mới</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Nam</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Nữ</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">GrusZ</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Trẻ em</a> </p>
+    <p><a href="" style="color: black; margin-left: 10px;">ĐẦU RA</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Bộ sưu tập</a></p>
+    <p><a href="" style="color: black; margin-left: 10px;">Sản Phẩm Khác</a></p>
+  </div>
+  <div class="col-sm-3">
+    <h4>LIÊN KẾT WEBSITE</h4>
+    <p><a href="" style="color: black;margin-left:10px;">Website Tổng công ti May 10</a></p>
+    <p><a href="" style="color: black;margin-left:10px;">Webside Khách sạn GarcoDragon</a></p>
+    <p><a href="" style="color: black;margin-left:10px;">Webside Siêu thị M10 Mart</a></p>
+    <p><a href="" style="color: black;margin-left:10px;">Webside Cao đẳng nghề LongBiên</a></p>
+  </div>
+  <div class="col-sm-3">
+    <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+    Hàng tháng May 10 đều có những dịch vụ và sản phẩm mới ra mắt nhằm phục vụ khách hàng tốt hơn. Để có thể cập nhật kịp thời những thông tin này, vui lòng nhập địa chỉ email của bạn vào ô dưới đây.
+    <nav class="navbar navbar-expand-sm">
+    <form class="form-inline" action="/action_page.php">
+    <input class="form-control mr-sm-2" type="text" placeholder="Địa chỉ email của bạn....  ">
+     <button class="btn btn-dark" ><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+    </form>
+  </nav>
+  <div class="row">
+  
+  <div class="col-lg-3"><i style="color: black; font-size: 20px" class="fab fa-facebook-f" ></i></div>
+  <div class="col-lg-3"><i class="fab fa-twitter" aria-hidden="true"></i></div>
+  <div class="col-lg-3"><i class="fab fa-youtube" aria-hidden="true"></i></div>
+  <div class="col-lg-3"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+     </div>
+    </div>
+   </body>
+  </div>
+  <div style="padding-top: 3%">
+<p style="border: solid 1px black;"></p></div>
+<div class="row">
+  <div class="col-sm-10">
+
+TỔNG CÔNG TY MAY 10 - CTCP
+<p>
+Địa chỉ : 765A Nguyễn Văn Linh, Sài Đồng, Long Biên, Hà Nội, Việt Nam.
+</p>
+<p>
+Tổng đài hỗ trợ khách hàng  <a href="" style="color: blue; margin-left: 10px;"> : 1900636628</a> - Email<a href="" style="color: blue; margin-left: 10px;"> : cskh@garco10.com.vn</a>cskh@garco10.com.vn - Điện thoại <a href="" style="color: blue; margin-left: 10px;"> : 1900636628</a>
+</p>
+<p>
+Mã số doanh nghiệp : 0100101308 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 15 tháng 12 năm 2004, thay đổi lần thứ 12 ngày 22 tháng 11 năm 2017
+</p>
+<p>
+© 2019 - Bản quyền thuộc về Tổng Công ty May 10 - CTCP
+</p>
+</div>
+  <div class="col-sm-1">
+    <img src="http://www.online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoSaleNoti.png" class="img-fluid" alt="Chania">
+  </div>
+</div>
+</html>
+
+</body>
+</html>
