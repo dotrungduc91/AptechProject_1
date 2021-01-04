@@ -1,0 +1,285 @@
+.tc-menu {
+border-right:solid black 1px;
+color: black; 
+}
+.leftmenu {
+ font-weight: bold;
+ text-transform: uppercase;
+}
+#tieudemenu{
+	font-size: 15px;
+}
+.check{
+	background-color: blue;
+}
+.imgclass{
+width: 100%;
+}
+.muahang{
+	background-color:black;
+	color: white;
+	text-align: center;
+	border: solid black 1px;
+}
+
+.form-check-input1{
+	background-color: blue;
+}
+.mausac {
+border: solid 1px black;
+height: 20px;
+width: 20px;
+}
+ul li .muahang:hover{
+	background-color: #3399ff;
+	border:#3399ff solid 1px;
+	color: white; 
+}
+.row #chuyendongsp:hover{
+   box-shadow: 0 0 11px 5px rgba(217, 217, 217, 1);
+
+}
+.leftmenu1{
+	padding-top: 10%;
+}
+
+
+
+/*RESPONSIVE IPAD*/
+@media screen and (max-width: 1024px)  {
+.leftmenu #tieudemn{
+	font-size: 14px;
+}
+
+#mn{
+	font-size: 13px;
+}
+
+#danhmuc{
+	font-size: 14px;
+}
+#danhm{
+	font-size: 14px;
+}
+
+#sanpham{
+	font-size: 13px;
+}
+ .muahang {
+ 	font-size: 14px;
+ }
+ 
+	.page-item {
+ 	font-size: 10px;
+ }
+}
+
+/*ipad mini/ipad*/
+@media screen and (max-width: 768px) {
+.leftmenu #tieudemn {
+		font-size: 11px;
+		display: block;
+}
+#mn {
+	font-size: 10px;
+	font-weight: bold;
+}
+.footer{
+ 	display: block!important;
+ }
+ .footer ul li a{
+ 	font-size: 16px;
+ }
+
+}
+
+
+/*laptop*/
+@media screen and (min-width: 1280px)  {
+	.leftmenu #tieudemn{
+		font-size: 15px;
+	}
+
+#mncon{
+	font-size: 12px;
+}
+#danhmuc{
+	font-size: 15px;
+}
+
+#sp{
+	font-size: 15px;
+}
+ .muahang {
+ 	font-size: 16px;
+ }
+	.page-item {
+ 	font-size: 15px;
+ }
+ 
+}
+
+/*iphone 6/7/8 plush*/
+ @media screen and (max-width: 414px)  {
+	.leftmenu #tieudemn{
+		font-size: 14px;
+	}
+
+#mn{
+	font-size: 13px;
+}
+
+#danhmuc{
+	font-size: 14px;
+}
+#danhm{
+	font-size: 13px;
+}
+
+#sanpham{
+	font-size: 13px;
+}
+ .nut-muahang {
+ 	font-size: 13px;
+ }
+	.page-item{
+ 	font-size: 13px;
+ }
+
+ .footer{
+ 	display: block!important;
+ }
+}
+/*laptop*/
+@media screen and (min-width: 1444px)  {
+	.leftmenu #tieudemn{
+		font-size: 18px;
+	}
+
+#mncon{
+	font-size: 15px;
+}
+#danhmuc{
+	font-size: 18px;
+}
+
+#sanpham{
+	font-size: 18px;
+}
+ .muahang {
+ 	font-size: 19px;
+ }
+	.page-item {
+ 	font-size: 17px;
+ }
+ 
+}
+
+/*iphone 6/7/8/x */
+@media screen and (max-width: 375px)  {
+.leftmenu #tieudemn{
+	font-size: 14px;
+	}
+
+#mn{
+	font-size: 13px;
+}
+#danhmuc{
+
+	font-size: 13px;
+}
+#danhm{
+	font-size: 11px;
+}
+
+#sanpham{
+	font-size:13px;
+}
+ .muahang {
+ 	font-size:12px;
+ }
+	.page-item {
+ 	font-size: 10px;
+ }
+ .footer{
+ 	display: block!important;
+ }
+}
+
+/*iphone 5*/
+@media screen and (max-width: 320px)  {
+	.leftmenu #tieudemn{
+		font-size: 12px;
+	}
+
+#mn{
+	font-size: 10px;
+}
+#danhm{
+	font-size: 10px;
+}
+#danhmuc{
+
+	font-size: 10px;
+}
+
+#sanpham{
+	font-size:12px;
+}
+ .muahang {
+ 	font-size:11px;
+ }
+	.page-item {
+ 	font-size: 11px;
+ }
+ .footer{
+ 	display: block!important;
+ }
+}
+
+.breadcrumb-item a{
+
+font-weight: bold;
+text-decoration: none;
+color: black;
+}
+.breadcrumb-item{
+font-size: 15px;
+text-decoration: none;
+}
+.page-link{
+	color: black;
+	border: solid 1px black;
+}
+.page-item .page-link:hover {
+	background-color:#3399ff;
+	font-weight: bold;
+	color: white;
+}
+
+
+
+
+
+.page-item{
+	padding: 0% 1%;
+}
+
+
+
+
+
+
+
+
+
+.breadcrumb-item a:hover{
+	color: #42a4f5
+}
+
+
+
+ 
+
+
+
