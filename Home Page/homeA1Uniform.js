@@ -96,3 +96,8 @@ function myFunction() {
 		});
 
 
+// CLOSE MODAL
+
+
+
+
