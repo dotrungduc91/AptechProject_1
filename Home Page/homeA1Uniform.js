@@ -23,7 +23,7 @@ function movedown_saleoff(){
 	
 }
 
-// setInterval(moveup_saleoff, 2000);
+setInterval(moveup_saleoff, 2000);
 
 
 // CAROSEL SALE GOOD PRODUCT
@@ -96,7 +96,28 @@ function myFunction() {
 		});
 
 
-// CLOSE MODAL
+// TEXT CHANGE
+var a = $('.text_change_content');
+index = 0;
+function text_change(){
+	console.log(a);
+	for (i=0;i<a.length;i++){
+		a[i].style.display = "none";
+		// a[i].hide(1000)
+	}
+		// a[index].slideUp("slow");
+		// a[index].show("slow")
+		a[index].style.display = "block";
+		a[index].style.animation = "move_text 1s";
+		index = index + 1;
+		if (index>a.length-1) {
+			index  = 0;
+		}
+	}
+	setInterval(text_change,2000)
+	
+
+
 
 
 
