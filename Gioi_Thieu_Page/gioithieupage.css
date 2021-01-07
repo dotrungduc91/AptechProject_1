@@ -179,9 +179,8 @@
 
 .text_change{
 	width: 500%;
-	background-color: blue;
+	background-color: #426cf5;
 	display: flex;
-
 }
 
 
@@ -197,511 +196,134 @@
 	font-family: TimeNewRoman
 }
 
-/*<!-- CAROSEL BANNER -->*/
 
+/*DIEU HƯƠNG*/
+.dieuhuong{
+		padding: 1% 0px;
+		font-size: 0.9rem;
+		font-family: timenewroman
 
-.carousel_banner_content{
-	overflow: hidden;
-	padding: 0px;
-	position: relative;
 }
 
-.total_banner{
-	width:400%;
-	display: flex;
-	transition: 1s;
-}
+.dieuhuong a:nth-child(1){
+		cursor: pointer;
+		position: relative;
+		color: black;
+		text-decoration: none;
+}	
 
-.banner{
-	width: 25%;
-}
+.dieuhuong a{
+		padding: 0px;
+		font-size: 0.9rem;
+		font-family: timenewroman
+}		
 
-.banner img{
-	width: 100%;
-}
-
-.carousel_banner_content .fa-chevron-left{
+.dieuhuong a:nth-child(1):before{
+	content: "";
 	position: absolute;
-	top: 50%;
-	left: 0%;
-	transform: translateY(-50%);
-	font-size: 2rem;
-}
-
-.carousel_banner_content .fa-chevron-right{
-	position: absolute;
-	top: 50%;
-	right: 0%;
-	transform: translateY(-50%);
-	font-size: 2rem;
-	cursor: pointer;
-}
-
-/*BANNER IMG*/
-
-
-.total_banner_img {
-	padding: 0px;
-}
-
-.total_banner_img .col-lg-12{
-	padding: 0px;
-}
-
-.total_banner_img .col-lg-4{
-	padding: 0px;
-}
-
-
-
-.total_banner_img img{
-	width: 100%;
-}
-
-.banner_img_title{
-	font-size: 1.5rem;
-	font-weight: bold;
-	cursor: pointer;
-	text-align: center;
-	padding-top: 0.5rem;
-}
-
-
-/*SẢN PHẨM MỚI*/
-
-.total_san_sale{
-	margin-top: 5%!important;
-	width: 75%;
-	margin: 0 auto;
-	border-top: thin solid black;
-	border-bottom: thin solid black;
-	padding: 2.5rem 0px
-}
-
-.total_san_sale div:first-child{
-	font-size: 1.5rem!important;
-	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
-	text-align: center;
-	font-weight: bold;
-}
-
-.total_san_sale div:nth-child(2) {
-	text-align: center;
-	margin-top: 3%;
-}
-
-
-
-.total_san_sale div:nth-child(2) a{
-	font-size: 1.2rem;
-	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
-	text-align: center;
-	color: black;
-	border: thin solid black;
-	padding: 1% 1%;
-	border-radius: 5%;
-	margin-left: 3%;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-
-
-.total_san_sale div a:hover{
-	color: blue;
-	border: blue thin solid;
-}
-
-/*TREND COAST*/
-.album_somi_vaikhangthuan{
-	background-image: url("home.img/banner_img/trendcoast.jpg"); 
-	background-size: cover;
-	height: 500px;
-	padding: 0px;
-	margin-top: 4%;
-	position: relative;
-}
-
-.album_somi_vaikhangthuan .backgroundcolor{
-	background-color: grey;
-	opacity: 0;
-	height: 500px;
-	z-index: 5;
-}
-
-.album_somi_vaikhangthuan_text{
-	position: absolute;
-	top: 35%;
-	width: 100%;
-	z-index: 10!important;
-}
-
-.album_somi_vaikhangthuan_text div:nth-child(1){
-	color: white;
-	font-size: 2rem;
-	text-align: center;
-
-}
-
-.album_somi_vaikhangthuan_text div:nth-child(2){
-	text-align: center;
-	margin-top: 1%;
-}
-
-
-.album_somi_vaikhangthuan_text div:nth-child(2) a{
-	text-align: center;
-	color: white;
-	padding: 0.5% 3%;
-	background-color: black;
-	text-decoration: none;
-	color: white;
-	opacity: 0.8;
-}
-
-.album_somi_vaikhangthuan_text div:nth-child(2) a:hover{
-	background-color: blue;
-	opacity: 0.8;
-
-}
-
-/*ORANGE OUT FIT*/
-.album_somi_sieuphang_polysun{
-	background-image: url("home.img/banner_img/orange_outfit.jpg"); 
-	background-size: cover;
-	height: 600px;
-	padding: 0px;
-	margin-top: 4%;
-	position: relative;
-}
-
-
-.album_somi_sieuphang_polysun_backgoundcolor{
-	height: 600px;
-	background-color: grey;
-	opacity: 0.2;
-}
-
-.album_somi_sieuphang_polysun_text{
-	position: absolute;
-	top: 25%;
-	width: 100%;
-	z-index: 10!important;
-}
-
-.album_somi_sieuphang_polysun_text div:nth-child(1){
-	color: white;
-	font-size: 2rem;
-	text-align: center;
-
-}
-
-.album_somi_sieuphang_polysun_text div:nth-child(2){
-	color: white;
-	font-size: 1rem;
-	text-align: center;
-
-}
-
-.album_somi_sieuphang_polysun div:nth-child(3){
-	text-align: center;
-	margin-top: 5%;
-}
-
-
-.album_somi_sieuphang_polysun div:nth-child(3) a{
-	text-align: center;
-	color: white;
-	padding: 0.5% 3%;
-	background-color: white;
-	text-decoration: none;
-	color: black;
-	margin-left: 5%;
-}
-
-.album_somi_sieuphang_polysun_text div:nth-child(3) a:hover{
-	background-color: blue;
-}
-
-/*<!-- SẢN PHẢM NỔI BẬT -->*/
-.carousel_noibat_title{
-	margin-top: 3%;
-	background-color: black;
-	text-align: center;
-	font-size: 1.5rem;
-	color: white;
-	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
-
-}
-
-.carousel_noibat_content{
-	overflow: hidden;
-	padding: 0px;
-	position: relative;
-}
-
-.total_product_noibat{
-	width:300%;
-	display: flex;
-	transition: 1s;
-}
-
-.product_noibat{
-	width: 6.67%;
-}
-
-.product_noibat img{
-	width: 100%;
-}
-
-.carousel_noibat_content .fa-chevron-left{
-	position: absolute;
-	top: 50%;
-	left: 0%;
-	transform: translateY(-50%);
-	font-size: 2rem;
-}
-
-.carousel_noibat_content .fa-chevron-right{
-	position: absolute;
-	top: 50%;
-	right: 0%;
-	transform: translateY(-50%);
-	font-size: 2rem;
-	cursor: pointer;
-}
-
-/*VIDEO MODAL*/
-.total_video_modal{
-	padding: 0px;
-	margin-top: 5%;
-}
-
-.total_video_modal .row{
-	margin: 0px;
-}
-
-.total_video_modal .col-lg-6 {
-	padding: 0px 5px;
-	position: relative;
-	overflow: hidden;
-}
-
-.total_video_modal .col-lg-6 div{
-		font-weight: bold;
-		text-align: center;
-		padding-top: 3%;
-}
-
-.total_video_modal .col-lg-6 img{
-	width: 100%;
-	transition: 0.5s
-}
-
-.total_video_modal .col-lg-6 img:hover{
-	transform: scale(1.1);
-}
-
-.total_video_modal .col-lg-6  .fa-play-circle{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	color: white;
-	font-size: 3rem;
-}
-
-.total_video_modal .col-lg-6  .fa-play-circle:hover{
-	color: blue;
-}
-
-.modal-body {
-	padding: 0px;
-	position: relative;
-}
-
-.modal-body button {
-	position: absolute;
-	right: 0%;
-	top: 0%;
-	transform: translate(50%,-50%);
-	background-color: black;
-	padding: 0.5%;
-	display: block;
-	font-size: 2rem;
-	color: white;
-}
-
-
-.modal-body iframe{
-	width: 100%;
-	height: 430px;
-}
-
-/*<!-- CAROSEL SELL GOOD -->*/
-.carousel_sale_good_title{
-	margin-top: 5%;
-	background-color: black;
-	text-align: center;
-	font-size: 1.5rem;
-	color: white;
-	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
-}
-
-.carousel_sale_good_content{
-	overflow: hidden;
-	padding: 0px;
-	position: relative;
-}
-
-.total_product_sale_good{
-	width:300%;
-	display: flex;
-	transition: 1s;
-}
-
-.product_sale_good{
-	width: 6.67%;
-	padding: 10px;
-	box-sizing: border-box;
-	position: relative;
-	transition: 1s;
-}
-
-.product_sale_good:hover{
-	
-/*	border: thin solid rgb(110, 0, 0);*/
-	transform: scale(1.05);
-	overflow: hidden;
-
-}
-
-
-.product_sale_good img{
-	width: 100%;
-}
-
-.product_sale_good img:hover{
-	width: 100%;
-	
-}
-
-.carousel_sale_good_content .fa-chevron-left{
-	position: absolute;
-	top: 50%;
-	left: 0%;
-	transform: translateY(-50%);
-	font-size: 2rem;
-}
-
-.carousel_sale_good_content .fa-chevron-right{
-	position: absolute;
-	top: 50%;
-	right: 0%;
-	transform: translateY(-50%);
-	font-size: 2rem;
-	cursor: pointer;
-}
-
-.product_sale_good_img_small{
-	width: 20%;
-	padding: 0.5%;
-	margin: 0 auto;
-	margin-top: 15%!important;
-	box-sizing: border-box;
-	border: thin solid black;
-	border-radius:5%;
-	overflow: hidden;
-	cursor: pointer;
-}
-
-.product_sale_good_img_small img{
+	bottom: 0px;
+	left: 0px;
+	width: 0px;
+	height: 1px;
 	transition: 0.5s;
+	background-color: black;
+}
+
+.dieuhuong a:nth-child(1):hover:before{
 	width: 100%;
 }
 
-.product_sale_good_img_small img:hover{
-	transform: scale(1.1);
-}
+/*GIOI THIEU*/
 
-.product_sale_good_title{
+.title_gioithieu{
 	text-align: center;
-	padding: 2% 2%;
-	color: black;
+	font-family: timenewroman;
+	padding: 0px;
+	font-size: 1.5rem;
+	margin-top:1%;
 }
 
-.product_sale_good_title a{
-	color: black;
-	text-decoration: none;
-}
-
-.product_sale_good_price{
+.title_gioithieu p:nth-child(1){
 	text-align: center;
-	padding: 1% 2%;
-	color: red;
-}
-
-.product_sale_good_price span{
+	font-family: timenewroman;
+	font-size: 1.5rem;
 	font-weight: bold;
-	padding: 0px 2%;
 }
 
-.product_sale_good_price del{
-	font-size: 0.8rem;
-	padding: 0px 2%;
+
+.title_gioithieu p:nth-child(3){
+	text-align: justify;
+	font-family: timenewroman;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-top: 1rem;
 }
 
-.product_sale_good_icon{
-	position: absolute;
-	bottom: 40%;
-	transform: translate();
-	height: 0px;
-	transition-duration: .5s!important;
-	display: flex;
-	margin: 0 auto;
+.title_gioithieu p:nth-child(4){
+	text-align: justify;
+	font-family: timenewroman;
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+.title_gioithieu p:nth-child(5){
+	text-align: justify;
+	font-family: timenewroman;
+	font-size: 1rem;
+}
+
+.title_gioithieu p:nth-child(6){
+	text-align: justify;
+	font-family: timenewroman;
+	font-size: 1rem;
+}
+
+
+.title_gioithieu img{
 	width: 100%;
-	justify-content: center;
-	font-size: 1rem;
-	overflow: hidden;
+
 }
 
-.product_sale_good:hover .product_sale_good_icon{
-	height: 1.5rem;
-}
+/*HỆ THONG CUA HANG*/
 
-
-.product_sale_good_icon button{
-	background-color: black;
-	color: white;
-	border: none;
-	margin-right: 5%;
-}
-
-.xemthem{
+.title_text{
 	text-align: center;
-	margin-top: 2%;
-
+	font-family: timenewroman;
+	padding: 0px;
+	margin-top: 2rem;
 }
 
-.xemthem a{
+.title_text p:nth-child(1){
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+
+.title_store{
+	margin-top: 2rem;
 	text-align: center;
-	background-color: black;
-	color: white;
-	padding: 0.5% 2%;
+	font-family: timenewroman;
+	padding: 0px;
+}
+
+.title_store p:nth-child(1){
+	text-align: left;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.title_store p:nth-child(2){
+	text-align: left;
 	font-size: 1rem;
-	text-decoration: none;
 }
 
-.xemthem a:hover{
-	background-color:blue;
-	
+.title_store iframe{
+	width: 100%;
+	height: 250px;
+	border: grey thin solid
 }
-
-
-
-
-
-
 
 
 /*FOOTER*/
@@ -863,8 +485,6 @@
 }
 
 /*INFORMATION COMPANY*/
-
-
 
 .border_information{
 	width: 70%;
@@ -1034,81 +654,7 @@ margin-top: 130%;
   	max-width: 95%;
   }
 
-  /*BANNER IMG*/
-.total_banner_img .col-12 {
-	padding: 0px;
-}
-
-.total_banner_img .col-6 {
-	padding: 0px;
-}
-
-.total_banner_img .col-12:nth-child(4) {
-	text-align: center;
-}
-
-.total_banner_img .col-12:nth-child(4) img{
-	width: 50%;
-}
-
-
-/*SẢN PHẨM MỚI*/
-.total_san_sale div:nth-child(2) a{
-	margin-left: 2%;
-	margin-top: 1%;
-	display: inline-block;
-}
-
-
-/*TREND COAST*/
-.album_somi_vaikhangthuan{
-	/*width: 95%;*/
-	background-size: cover;
-	height: 300px;
-	
-}
-
-
-.album_somi_vaikhangthuan .backgroundcolor{
-	height: 300px;
-}
-
- /*ORANGE OUT FIT*/
- .album_somi_sieuphang_polysun{
- 	height: 300px;
- 	/*width: 95%;*/
- }
-
- .album_somi_sieuphang_polysun .album_somi_sieuphang_polysun_backgoundcolor{
- 	height: 300px;
- 	
- }
- /*SAN PHAM NOI BAT*/
- .total_product_noibat{
- 	width: 600%;
- }
-
- .product_noibat{
- 	width: 5.55%;
- }
-
-
- /*VIDEO MODAL*/
- .total_video_modal {
- /*	width: 95%;*/
- }
-
-
-/*SALE GOOD CAROSEL*/
- .total_product_sale_good{
- 	width: 600%;
- }
-
- .product_sale_good{
- 	width: 5.55%;
- }
-
-
+ 
 
 
 
@@ -1161,12 +707,6 @@ margin-top: 130%;
 	margin-top: 2%;
 
 }
-
-
-
-
-
-
 }
 
 
@@ -1177,80 +717,20 @@ margin-top: 130%;
     font-size: 12px;
   }
 
-  /*BANNER COUPLE*/
-.total_banner_img .col-12 {
-	padding: 0px;
-}
-
-.total_banner_img .col-6 {
-	padding: 0px;
-}
-
-.total_banner_img .col-12:nth-child(3) {
+ .title_gioithieu p:nth-child(1){
 	text-align: center;
+	font-family: timenewroman;
+	font-size: 1.2rem;
+	font-weight: bold;
 }
 
-.total_banner_img .col-12:nth-child(3) img{
-	width: 50%;
+ .title_gioithieu p:nth-child(3){
+	font-size: 1rem;
 }
-
-
-/*TREND COAST*/
-.album_somi_vaikhangthuan{
-	width: 95%;
-	background-size: cover;
-	height: 300px;
-}
-
-
-.album_somi_vaikhangthuan .backgroundcolor{
-	height: 300px;
-
-}
-
- /*ORANGE OUT FIT*/
- .album_somi_sieuphang_polysun{
- 	height: 300px;
- 	width: 95%;
- 	
- }
-
- .album_somi_sieuphang_polysun .album_somi_sieuphang_polysun_backgoundcolor{
- 	height: 300px;
- }
-
- /*SAN PHAM NOI BAT*/
- .total_product_noibat{
- 	width: 600%;
- }
-
- .product_noibat{
- 	width: 8.3%;
- }
-
-
- /*VIDEO MODAL*/
- .total_video_modal {
- 	width: 95%;
- }
-
-
-/*SALE GOOD CAROSEL*/
- .total_product_sale_good{
- 	width: 600%;
- }
-
- .product_sale_good{
- 	width: 8.3%;
- }
 
 
 /*FOOTER*/
 
-/*.footer .col-12{
-	font-size: 1.5rem;
-}
-*/
 
 .footer .col-12 li{
 	font-size: 1.1rem;
@@ -1298,18 +778,10 @@ margin-top: 130%;
 }
 
 
-
-
-
 @keyframes move_text{
 	from  { top: 30px; }
 	to { top:0px; }
 }	
-
-
-
-
-
 
 
 
