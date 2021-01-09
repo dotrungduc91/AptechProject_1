@@ -87,9 +87,6 @@ ul li .muahang:hover{
 .footer{
  	display: block!important;
  }
- .footer ul li a{
- 	font-size: 16px;
- }
 
 }
 
@@ -146,8 +143,12 @@ ul li .muahang:hover{
  	font-size: 13px;
  }
 
- .footer{
- 	display: block!important;
+ .breadcrumb-item a{
+ 	font-size: 12px;
+ }
+
+ .breadcrumb-item small{
+ 	font-size: 12px;
  }
 }
 /*laptop*/

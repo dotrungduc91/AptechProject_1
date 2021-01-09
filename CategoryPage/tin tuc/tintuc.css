@@ -1,6 +1,7 @@
 .tu_khoa{
 	border: solid 1px black;
     text-align: center;
+    width: 100%;
 }
 .tu_khoa:hover {
 	border: solid 1px #3399ff;
