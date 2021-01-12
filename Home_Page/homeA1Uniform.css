@@ -196,6 +196,12 @@
 	font-family: TimeNewRoman
 }
 
+@keyframes move_text{
+	from  { top: 30px; }
+	to { top:0px; }
+}	
+
+
 /*BANNER IMG*/
 
 .total_banner_img {
@@ -1465,10 +1471,6 @@ margin-top: 130%;
 
 
 
-@keyframes move_text{
-	from  { top: 30px; }
-	to { top:0px; }
-}	
 
 
 
