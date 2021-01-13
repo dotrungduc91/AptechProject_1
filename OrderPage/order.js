@@ -1,9 +1,12 @@
-	var Orded_List = [];
-	// var index 
+	// var Orded_List = [];
+	var index = ""
+
+
+
 
 	$(function() {
 			//string json => localStorage
-		var json = localStorage.getItem('Orded_List_db')
+		var json = localStorage.getItem('Order_db')
 		//JSON.parse => chuyen string => mang object
 		Orded_List = JSON.parse(json)
 		//Mang object
@@ -14,78 +17,68 @@
 		display_Orded_List()
 	})
 
-	function add_order_information(){
-		console.log("1")
-		name = $("#name").val();
-		phonenumber = $("#phonenumber").val();
-		address = $("#address").val();
-		product_rollno = $("#product_rollno").val();
-		product_quantity = $("#product_quantity").val();
-		index = $("#check_index").val();
 
 
-		var order_information = {
-			"name": name,
-			"phonenumber": phonenumber,
-			"address": address,
-			"product_rollno": product_rollno,
-			"product_quantity": product_quantity,
-		}
 
-
-		if (index != "") {
-			Orded_List[index] = order_information;
-			display_Orded_List();
-			index = ""
-			return;
-		}
-
-		Orded_List.push(order_information)
-
-		display_Orded_List()
-
-
-			localStorage.setItem ('Orded_List_db', JSON.stringify(Orded_List))
-	}
-
-
-// localStorage.setItem(order_db, JSON.stringify(Orded_List))
-// var json=localStorage.getItem(order_db)
-// var Orded_List = JSON.parse(json)
 
 	function display_Orded_List(){
 		$("#order_result").html('')
 		for (i=0;i<Orded_List.length;i++) {
 			$("#order_result").append(
 				`<tr>
-				<th>${Orded_List[i].name}</th>
-				<th>${Orded_List[i].phonenumber}</th>
-				<th>${Orded_List[i].address}</th>
-				<th>${Orded_List[i].product_rollno}</th>
-				<th>${Orded_List[i].product_quantity}</th>
-				<th><button onclick="edit_order(${i})">Sửa</button></th>
-				<th><button onclick="delete_order(${i})">Xóa</button></th>
+				<td>${Orded_List[i].product_name}</td>
+				<td><input onkeyup="change_total_money(${i})" id ="product_quantity_${i}" style="color:white; border:none" type="number" min = '1' name="" class = "bg-dark"></td>
+				<td>${Orded_List[i].product_price}</td>
+			<td ><input id="total_money_${i}" style="color:white; border:none"  class = "bg-dark"  value="${Orded_List[i].product_quantity*Orded_List[i].product_price}"></td>
+				<td><button onclick="delete_order(${i})">Xóa</button></td>
 				</tr>`
 				)
+			$("#product_quantity_"+i).val(Orded_List[i].product_quantity)
 		}
 	}
 
-	function delete_order(index){
+
+			function delete_order(index){
 		console.log(index);
 		Orded_List.splice(index,1)
-		display_Orded_List()
+	
+			localStorage.setItem('Order_db',JSON.stringify(Orded_List))
+		var json = localStorage.getItem('Order_db')
+		 Orded_List = JSON.parse(json)
+				if(Orded_List == null) {
+			Orded_List = []
+			}
+			display_Orded_List()
 	}
 
-	function edit_order(index){
-		// index = i
-		var order_information = Orded_List[index]
-		document.getElementById('check_index').value = index;
-		// $("#check_index").val(index);
-		// index_fix = $("#check_index").val()
-			$("#name").val(Orded_List[index].name);
-		 $("#phonenumber").val(Orded_List[index].phonenumber);
-		 $("#address").val(Orded_List[index].address);
-		 $("#product_rollno").val(Orded_List[index].product_rollno);
-		$("#product_quantity").val(Orded_List[index].product_quantity);
+	
+
+		
+	function change_total_money(index){
+		product_quantity = $("#product_quantity_"+index).val() 
+		total_money = product_quantity  *  Orded_List[index].product_price
+		$("#total_money_"+index).val(total_money)
 	}
+		 
+
+
+			
+
+
+	
+
+
+
+	// function edit_order(i){
+	// 	index = i
+	// 	var order_information = Orded_List[index]
+	// 	document.getElementById('check_index').value = index;
+	// 	// $("#check_index").val(index);
+	// 	// index_fix = $("#check_index").val()
+	// 		$("#name").val(Orded_List[index].name);
+	// 	 $("#phonenumber").val(Orded_List[index].phonenumber);
+	// 	 $("#address").val(Orded_List[index].address);
+	// 	 $("#product_rollno").val(Orded_List[index].product_rollno);
+	// 	$("#product_quantity").val(Orded_List[index].product_quantity);
+	// }
 

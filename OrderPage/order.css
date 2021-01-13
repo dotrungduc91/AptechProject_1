@@ -2,14 +2,18 @@
 body{
 	font-family: timenewroman;
 	background:url(banner_spring.jpg);
+	background-size: contain;
+	background-color: white;
 	}
 
 .order_page{
 	padding-top: 5% ;
+	width: 100%;
 }
 
-.input_information{
-	border-right: thin solid #b8b5ae
+.title_branch{
+	font-size: 1.5rem;
+	font-weight: bold;
 }
 
 /*DIEU HƯƠNG*/
@@ -48,37 +52,61 @@ body{
 	width: 100%;
 }
 
-/*LEFT*/
-.title_branch{
-	font-weight: bold;
-	font-size: 1.5rem;
-}
 
-.dathang{
-	margin-top: 3%;
-}
 
-/*RIGHT*/
 .order_title{
 	font-weight: bold;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
+	text-align: center;
 }
 
 .order_list table {
 	margin-top: 3%;
 }
 
+.order_list table td{
+	width: 20%;
+}
+
 .order_list table thead{
-	font-size: 0.7rem;
+	font-size: 1rem;
 	font-weight: normal!important;
 	text-align: center;
 	vertical-align:middle;
+}
+
+.order_list table tbody {
+	text-align: center;
+	font-size: 0.9rem;
+	font-weight: normal!important;
+}
+
+.order_list table tbody input{
+	text-align: center;
+	width: 100%;
 }
 
 .order_list table tbody button{
 	background-color: white;
 	border: none;
 }
+
+.dathang_button{
+	text-align: center;
+	width: 100%;
+}
+
+.dathang_button button{
+	background-color: black;
+	color: white;
+	border: none;
+	padding: 0.5% 3%;
+}
+
+.dathang_button button:hover{
+	background-color: blue;
+}
+
 
 .come_back{
 	font-weight: bold; 
@@ -93,4 +121,37 @@ body{
 
 .come_back a:hover{
 	color: blue;
+}
+
+
+
+/*CSS CHO MOBLIE*/
+@media only screen and (max-width: 812px) {
+ 	.order_title{
+ 		font-size: 1.2rem;
+ 		margin-top: 5%;
+ 	}
+
+ 	.order_list table thead{
+ 		font-size: 1rem;
+ 	}
+
+ 	.order_list table tbody{
+ 		font-size: 0.9rem;
+ 	}
+}
+
+@media only screen and (max-width: 576px) {
+ 	.order_title{
+ 		font-size: 1rem;
+ 		margin-top: 5%;
+ 	}
+
+ 	.order_list table thead{
+ 		font-size: 0.6rem;
+ 	}
+
+ 	.order_list table tbody{
+ 		font-size: 0.6rem;
+ 	}
 }
