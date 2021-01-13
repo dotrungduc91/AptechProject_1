@@ -6,6 +6,13 @@
 	})
 
 function muangay1(){
+
+			var json = localStorage.getItem('Order_db')
+		 Orded_List = JSON.parse(json)
+				if(Orded_List == null) {
+			Orded_List = []
+			}
+
 	var order_information = {
 			"product_name": "0360119299ON 314",
 			"product_quantity": 1,
@@ -18,8 +25,15 @@ function muangay1(){
 	}
 
 	function muangay2(){
+
+			var json = localStorage.getItem('Order_db')
+		 Orded_List = JSON.parse(json)
+				if(Orded_List == null) {
+			Orded_List = []
+			}
+
 	var order_information = {
-			"product_name": "0360119299ON 314",
+			"product_name": "0360119299ON 315",
 			"product_quantity": 1,
 			"product_price": 399000,
 		}
@@ -30,12 +44,171 @@ function muangay1(){
 	}
 
 
+	function muangay3(){
+
+			var json = localStorage.getItem('Order_db')
+		 Orded_List = JSON.parse(json)
+				if(Orded_List == null) {
+			Orded_List = []
+			}
+		
+	var order_information = {
+			"product_name": "0360119299ON 316",
+			"product_quantity": 1,
+			"product_price": 299000,
+		}
+
+	Orded_List.push(order_information)	
+	localStorage.setItem('Order_db',JSON.stringify(Orded_List))
+
+	}
 
 
+	function muangay4(){
+
+			var json = localStorage.getItem('Order_db')
+		 Orded_List = JSON.parse(json)
+				if(Orded_List == null) {
+			Orded_List = []
+			}
+		
+	var order_information = {
+			"product_name": "0360119299ON 317",
+			"product_quantity": 1,
+			"product_price": 399000,
+		}
+
+	Orded_List.push(order_information)	
+	localStorage.setItem('Order_db',JSON.stringify(Orded_List))
+
+	}
+
+	function muangay5(){
+
+			var json = localStorage.getItem('Order_db')
+		 Orded_List = JSON.parse(json)
+				if(Orded_List == null) {
+			Orded_List = []
+			}
+		
+	var order_information = {
+			"product_name": "0360119299ON 318",
+			"product_quantity": 1,
+			"product_price": 299000,
+		}
+
+	Orded_List.push(order_information)	
+	localStorage.setItem('Order_db',JSON.stringify(Orded_List))
+
+	}
+
+	function muangay6(){
+
+			var json = localStorage.getItem('Order_db')
+		 Orded_List = JSON.parse(json)
+				if(Orded_List == null) {
+			Orded_List = []
+			}
+		
+	var order_information = {
+			"product_name": "0360119299ON 319",
+			"product_quantity": 1,
+			"product_price": 399000,
+		}
+
+	Orded_List.push(order_information)	
+	localStorage.setItem('Order_db',JSON.stringify(Orded_List))
+
+	}
+
+	function muangay7(){
+
+			var json = localStorage.getItem('Order_db')
+		 Orded_List = JSON.parse(json)
+				if(Orded_List == null) {
+			Orded_List = []
+			}
+		
+	var order_information = {
+			"product_name": "0360119299ON 320",
+			"product_quantity": 1,
+			"product_price": 299000,
+		}
+
+	Orded_List.push(order_information)	
+	localStorage.setItem('Order_db',JSON.stringify(Orded_List))
+
+	}
+
+		function muangay8(){
+			var json = localStorage.getItem('Order_db')
+		 Orded_List = JSON.parse(json)
+				if(Orded_List == null) {
+			Orded_List = []
+			}
+		
+	var order_information = {
+			"product_name": "0360119299ON 321",
+			"product_quantity": 1,
+			"product_price": 399000,
+		}
+
+	Orded_List.push(order_information)	
+	localStorage.setItem('Order_db',JSON.stringify(Orded_List))
+	}
 
 
+		function muangay9(){
+			var json = localStorage.getItem('Order_db')
+		 Orded_List = JSON.parse(json)
+				if(Orded_List == null) {
+			Orded_List = []
+			}
+		
+	var order_information = {
+			"product_name": "0360119299ON 322",
+			"product_quantity": 1,
+			"product_price": 299000,
+		}
+
+	Orded_List.push(order_information)	
+	localStorage.setItem('Order_db',JSON.stringify(Orded_List))
+	}
+
+		function muangay10(){
+			var json = localStorage.getItem('Order_db')
+		 Orded_List = JSON.parse(json)
+				if(Orded_List == null) {
+			Orded_List = []
+			}
+		
+	var order_information = {
+			"product_name": "0360119299ON 323",
+			"product_quantity": 1,
+			"product_price": 399000,
+		}
+
+	Orded_List.push(order_information)	
+	localStorage.setItem('Order_db',JSON.stringify(Orded_List))
+	}
 
 
+			function muangay11(){
+			var json = localStorage.getItem('Order_db')
+		 Orded_List = JSON.parse(json)
+				if(Orded_List == null) {
+			Orded_List = []
+			}
+		
+	var order_information = {
+			"product_name": "0360119299ON 324",
+			"product_quantity": 1,
+			"product_price": 299000,
+		}
+
+	Orded_List.push(order_information)	
+	localStorage.setItem('Order_db',JSON.stringify(Orded_List))
+	}
 
 // CAROSEL SALE OFF PRODUCT
 total = document.getElementsByClassName('product_sale_off').length -5;
