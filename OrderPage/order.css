@@ -1,0 +1,157 @@
+
+body{
+	font-family: timenewroman;
+	background:url(banner_spring.jpg);
+	background-size: contain;
+	background-color: white;
+	}
+
+.order_page{
+	padding-top: 5% ;
+	width: 100%;
+}
+
+.title_branch{
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+/*DIEU HƯƠNG*/
+.dieuhuong{
+		padding: 1% 0px;
+		font-size: 0.9rem;
+		font-family: timenewroman
+
+}
+
+.dieuhuong a:nth-child(1){
+		cursor: pointer;
+		position: relative;
+		color: black;
+		text-decoration: none;
+}	
+
+.dieuhuong a{
+		padding: 0px;
+		font-size: 0.9rem;
+		font-family: timenewroman
+}		
+
+.dieuhuong a:nth-child(1):before{
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 0px;
+	height: 1px;
+	transition: 0.5s;
+	background-color: black;
+}
+
+.dieuhuong a:nth-child(1):hover:before{
+	width: 100%;
+}
+
+
+
+.order_title{
+	font-weight: bold;
+	font-size: 1.4rem;
+	text-align: center;
+}
+
+.order_list table {
+	margin-top: 3%;
+}
+
+.order_list table td{
+	width: 20%;
+}
+
+.order_list table thead{
+	font-size: 1rem;
+	font-weight: normal!important;
+	text-align: center;
+	vertical-align:middle;
+}
+
+.order_list table tbody {
+	text-align: center;
+	font-size: 0.9rem;
+	font-weight: normal!important;
+}
+
+.order_list table tbody input{
+	text-align: center;
+	width: 100%;
+}
+
+.order_list table tbody button{
+	background-color: white;
+	border: none;
+}
+
+.dathang_button{
+	text-align: center;
+	width: 100%;
+}
+
+.dathang_button button{
+	background-color: black;
+	color: white;
+	border: none;
+	padding: 0.5% 3%;
+}
+
+.dathang_button button:hover{
+	background-color: blue;
+}
+
+
+.come_back{
+	font-weight: bold; 
+	font-size: 1rem;
+	margin-top: 3%;"
+}
+
+.come_back a{
+	color: black;
+	text-decoration: none;
+}
+
+.come_back a:hover{
+	color: blue;
+}
+
+
+
+/*CSS CHO MOBLIE*/
+@media only screen and (max-width: 812px) {
+ 	.order_title{
+ 		font-size: 1.2rem;
+ 		margin-top: 5%;
+ 	}
+
+ 	.order_list table thead{
+ 		font-size: 1rem;
+ 	}
+
+ 	.order_list table tbody{
+ 		font-size: 0.9rem;
+ 	}
+}
+
+@media only screen and (max-width: 576px) {
+ 	.order_title{
+ 		font-size: 1rem;
+ 		margin-top: 5%;
+ 	}
+
+ 	.order_list table thead{
+ 		font-size: 0.6rem;
+ 	}
+
+ 	.order_list table tbody{
+ 		font-size: 0.6rem;
+ 	}
+}
