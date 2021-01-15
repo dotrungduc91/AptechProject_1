@@ -324,7 +324,7 @@ function text_change(){
 		$(a[index]).show()
 		
 		a[index].style.animation = "move_text 1s";
-		a[index].animate({})
+		
 		index = index + 1;
 		if (index>a.length-1) {
 			index  = 0;

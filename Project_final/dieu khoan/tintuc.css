@@ -1,0 +1,47 @@
+.tu_khoa{
+	border: solid 1px black;
+    text-align: center;
+}
+.tu_khoa:hover {
+	border: solid 1px #3399ff;
+	background-color: #3399ff;
+}
+.tu_khoa a {
+	color: black;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0% 0%;
+}
+.tu_khoa a:hover {
+	color: white;
+	text-decoration: none;
+}
+.imgclass{
+	width: 100%;
+	max-height: 70%;
+}
+.tieudett{
+	font-size: 18px;
+	font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+.leftmenu #tieudemn {
+		font-size: 11px;
+		display: block;
+}
+#mn {
+	font-size: 10px;
+	font-weight: bold;
+}
+.footer{
+ 	display: block!important;
+ }
+ .footer ul li a{
+ 	font-size: 16px;
+ }
+.tu_khoa a{
+	font-size: 10px;
+}
+}
+
